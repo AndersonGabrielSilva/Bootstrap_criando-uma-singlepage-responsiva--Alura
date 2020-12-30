@@ -1,0 +1,94 @@
+#painel-pai{
+    
+margin-top: 20px;
+}
+
+/* Configuração necessaria para conseguir colocar a imagem no header
+é necessario informar as tags pai que o arquivo ocupa 100% da tela */
+html,
+body {
+    height: 100%;
+}
+
+header {
+    background-image: url(../img/castelo.jpg);
+    background-size: cover; /**/
+    background-position: top center;
+    height: 100%;
+    position: relative;
+}
+
+header h1:first-child{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.topCasaFina-banner{
+    color: #FFF;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    position: absolute;/*Informa que o elemento ira se posicionar apartir do elemento pai*/
+    top: 50%;/*Se posiciona 50% para baixo do pai, (header)*/
+    left: 50%;
+    transform: translate(-50%, -50%);/*Move o elemento, nesta propriedade movemos o banner 50% para cima dele mesmo*/
+    transition: 0.3s;   
+}
+
+.titulo-depoimento{
+    background-color: #0275d8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.contato-select,
+.grupo-radio {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.grupo-radio radio:first-child{
+    margin-top: 0;
+}
+
+@media(min-width:768px){
+    .projetos-responsivo{
+        width: 49%;
+        float: left;
+    }
+
+    #painel-pai{
+        margin-top: 0;
+    }
+}
+@media(min-Width:992px){
+    .topCasaFina-banner{
+        left: 0;
+        transform: translate(15%,-80%);
+        width: 50%;
+    }
+
+    .topCasaDina-bannerWrapper{
+        position: relative;
+        height: 100%;
+    }
+}
+
+
+footer{
+    background-color: #333;
+    color: #FFF;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+footer address:last-child{
+    margin-bottom: 0;
+}
+
+
